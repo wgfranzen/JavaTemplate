@@ -45,6 +45,15 @@
         <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
         <commons.lang3.version>3.14.0</commons.lang3.version>
 
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-csv -->
+        <commons.csv.version>1.10.0</commons.csv.version>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-text -->
+        <commons.text.version>1.10.0</commons.text.version>
+
+        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+        <commons.io.version>2.11.0</commons.io.version>
+
         <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
         <!-- Serialize Formats, Controls -->
         <gson.version>2.11.0</gson.version>
@@ -149,7 +158,26 @@
             <scope>test</scope>
         </dependency-->
 
+        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+        <!--dependency>
+          <groupId>commons-io</groupId>
+          <artifactId>commons-io</artifactId>
+          <version>${commons.io.version}</version>
+        </dependency-->
 
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-text -->
+        <!--dependency>
+          <groupId>org.apache.commons</groupId>
+          <artifactId>commons-text</artifactId>
+          <version>${commons.text.version}</version>
+        </dependency-->
+
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-csv -->
+        <!--dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-csv</artifactId>
+            <version>${commons.csv.version}</version>
+        </dependency-->
 
         <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
         <!--dependency>
