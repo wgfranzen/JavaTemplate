@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>net.wf0b.code</groupId>
+    <artifactId>JavaTemplate</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <description>The template for use with GitHub when establishing new Java Code Projects.</description>
+
+    <properties>
+        <maven.compiler.source>22</maven.compiler.source>
+        <maven.compiler.target>22</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <jdbc.directory>${env.SHARED_DIRECTORY}/jdbcDrivers</jdbc.directory>
+        <release.directory>${env.GITHUB_IO_DIRECTORY}/Release</release.directory>
+        <snapshot.directory>${env.SHARED_DIRECTORY}/Snapshot</snapshot.directory>
+        <documentation.directory>${env.SHARED_DIRECTORY}/Documentation</documentation.directory>
+        <localapps.directory>${env.SHARED_DIRECTORY}/LocalApps</localapps.directory>
+        <!-- https://mvnrepository.com/artifact/org.antlr/ST4 -->
+        <ST4.version>4.3.4</ST4.version>
+
+        <!-- https://mvnrepository.com/artifact/org.antlr/antlr4-runtime -->
+        <!-- tied to internal Intellij Build version -->
+        <antlr.version>4.13.1</antlr.version>
+
+        <!-- https://mvnrepository.com/artifact/org.commonmark/commonmark -->
+        <commonmark.version>0.22.0</commonmark.version>
+
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+        <slf4j.version>2.0.13</slf4j.version>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+        <log4j.version>2.19.0</log4j.version>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+        <commons.lang3.version>3.14.0</commons.lang3.version>
+
+        <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+        <!-- Serialize Formats, Controls -->
+        <gson.version>2.11.0</gson.version>
+
+        <!-- https://mvnrepository.com/artifact/info.picocli/picocli-codegen -->
+        <!-- https://mvnrepository.com/artifact/info.picocli/picocli -->
+        <picocli.version>4.7.0</picocli.version>
+
+        <!--< https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter -->
+        <junit.jupiter.version>5.10.3</junit.jupiter.version>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-clean-plugin -->
+        <maven.clean.plugin>3.2.0</maven.clean.plugin>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+        <maven.compiler.plugin>3.13.0</maven.compiler.plugin>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+        <maven.surefire.plugin>3.3.0</maven.surefire.plugin>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jar-plugin -->
+        <maven.jar.plugin>3.4.2</maven.jar.plugin>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-assembly-plugin -->
+        <maven.assembly.plugin>3.7.1</maven.assembly.plugin>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-install-plugin -->
+        <maven.install.plugin>3.1.2</maven.install.plugin>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-deploy-plugin -->
+        <maven.deploy.plugin>3.1.2</maven.deploy.plugin>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-site-plugin -->
+        <maven.site.plugin>4.0.0-M15</maven.site.plugin>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-project-info-reports-plugin -->
+        <maven.project.info.reports.plugin>3.6.1</maven.project.info.reports.plugin>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-report-plugin -->
+        <maven.surefire.report.plugin>3.3.0</maven.surefire.report.plugin>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jxr-plugin -->
+        <maven.jxr.plugin>3.4.0</maven.jxr.plugin>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-javadoc-plugin -->
+        <maven.javadoc.plugin>3.7.0</maven.javadoc.plugin>
+
+    </properties>
+
+    <dependencies>
+
+
+        <!-- https://mvnrepository.com/artifact/org.antlr/ST4 -->
+        <!--dependency>
+            <groupId>org.antlr</groupId>
+            <artifactId>ST4</artifactId>
+            <version>${ST4.version}</version>
+        </dependency-->
+
+
+        <!-- https://mvnrepository.com/artifact/org.commonmark/commonmark -->
+        <!--dependency>
+            <groupId>org.commonmark</groupId>
+            <artifactId>commonmark</artifactId>
+            <version>${commonmark.version}</version>
+        </dependency-->
+
+
+        <!-- https://mvnrepository.com/artifact/com.googlecode.libphonenumber/libphonenumber -->
+        <!--dependency>
+            <groupId>com.googlecode.libphonenumber</groupId>
+            <artifactId>libphonenumber</artifactId>
+            <version>${google.libphonenumber.version}</version>
+        </dependency-->
+
+        <!--dependency>
+            <groupId>org.antlr</groupId>
+            <artifactId>antlr4-runtime</artifactId>
+            <version>${antlr.version}</version>
+        </dependency-->
+
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j2-impl -->
+        <!--dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j2-impl</artifactId>
+            <version>2.23.1</version>
+            <scope>test</scope>
+        </dependency-->
+
+
+
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+        <!--dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons.lang3.version}</version>
+        </dependency-->
+
+        <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+        <!-- Serialize Formats, Controls -->
+        <!--dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${gson.version}</version>
+        </dependency-->
+
+        <!-- https://mvnrepository.com/artifact/info.picocli/picocli -->
+        <!--dependency>
+            <groupId>info.picocli</groupId>
+            <artifactId>picocli</artifactId>
+            <version>${picocli.version}</version>
+        </dependency-->
+
+        <!-- https://mvnrepository.com/artifact/info.picocli/picocli-codegen -->
+        <!--dependency>
+            <groupId>info.picocli</groupId>
+            <artifactId>picocli-codegen</artifactId>
+            <version>${picocli.version}</version>
+        </dependency-->
+
+        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!--dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>24.0.0</version>
+            <scope>compile</scope>
+        </dependency-->
+
+        <!--dependency>
+            <groupId>net.wf0b.code</groupId>
+            <artifactId>Foundation</artifactId>
+            <version>0.1</version>
+        </dependency-->
+
+    </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>releases</id>
+            <name>Release Repository</name>
+            <url>file://${release.directory}</url>
+            <layout>default</layout>
+        </repository>
+        <snapshotRepository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>snapshots</id>
+            <name>Snapshot Repository</name>
+            <url>file://${snapshot.directory}</url>
+            <layout>default</layout>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <build>
+        <plugins>
+            <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+            <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>${maven.clean.plugin}</version>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin}</version>
+                <!-- annotationProcessorPaths for picocli -->
+                <configuration>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>info.picocli</groupId>
+                            <artifactId>picocli-codegen</artifactId>
+                            <version>${picocli.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                    <compilerArgs>
+                        <arg>-Aproject=${project.groupId}/${project.artifactId}</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven.surefire.plugin}</version> <!-- to support DisplayName tags in junit reporting -->
+                <configuration>
+                    <additionalClasspathElements>
+                        <!--additionalClasspathElement>${jdbc.directory}/nzjdbc.jar</additionalClasspathElement -->
+                        <!--additionalClasspathElement>${jdbc.directory}/ojdbc8.jar</additionalClasspathElement -->
+                    </additionalClasspathElements>
+                    <argLine>-Xms2048m -Xmx8192m</argLine>
+                    <!-- groups are:
+                            sample              - the sample application
+                            special             - limited testing, typically module under test
+                            generate            - to generate code (prior to mvn compile)
+                            detail              - all tests over all code
+
+                            See Readme.md
+                    -->
+                    <groups>detail</groups>
+                    <statelessTestsetReporter
+                            implementation="org.apache.maven.plugin.surefire.extensions.junit5.JUnit5Xml30StatelessReporter">
+                        <disable>false</disable>
+                        <version>3.0</version>
+                        <usePhrasedFileName>false</usePhrasedFileName>
+                        <usePhrasedTestSuiteClassName>true</usePhrasedTestSuiteClassName>
+                        <usePhrasedTestCaseClassName>true</usePhrasedTestCaseClassName>
+                        <usePhrasedTestCaseMethodName>true</usePhrasedTestCaseMethodName>
+                    </statelessTestsetReporter>
+                    <consoleOutputReporter
+                            implementation="org.apache.maven.plugin.surefire.extensions.junit5.JUnit5ConsoleOutputReporter">
+                        <disable>false</disable>
+                        <encoding>UTF-8</encoding>
+                        <usePhrasedFileName>false</usePhrasedFileName>
+                    </consoleOutputReporter>
+                    <statelessTestsetInfoReporter
+                            implementation="org.apache.maven.plugin.surefire.extensions.junit5.JUnit5StatelessTestsetInfoReporter">
+                        <disable>false</disable>
+                        <usePhrasedFileName>false</usePhrasedFileName>
+                        <usePhrasedClassNameInRunning>true</usePhrasedClassNameInRunning>
+                        <usePhrasedClassNameInTestCaseSummary>true</usePhrasedClassNameInTestCaseSummary>
+                    </statelessTestsetInfoReporter>
+                </configuration>
+            </plugin>
+
+            <!--
+             | mvn javadoc:jar creates a javadoc jar
+             | mvn source:jar creates a sources jar
+             | -->
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>${maven.jar.plugin}</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>net.wf0b.code.generateWeb.Generate</mainClass>
+                            <classpathPrefix>dependency/</classpathPrefix>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
+            <!-- The assembly is run manually.
+             |   Prior to execution, execute mvn dependency:copy-dependencies.
+             |   This will create the dependency directory in the project build directory.
+             |
+             |
+             | The jar plugin (above) refers to this directory in classpathPrefix, enabling mainClass
+             |   execution.
+             |
+             |   Execute mvn assembly:single after all steps are completed for generating prerequesites.
+             |
+             | -->
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>${maven.assembly.plugin}</version>
+                <configuration>
+                    <descriptors>
+                        <descriptor>src/assembly/bin.xml</descriptor>
+                        <descriptor>src/assembly/windows.xml</descriptor>
+                    </descriptors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <phase>package</phase>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>${maven.install.plugin}</version>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>${maven.deploy.plugin}</version>
+            </plugin>
+
+            <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
+            <plugin>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>${maven.site.plugin}</version>
+                <configuration>
+                    <outputDirectory>${project.build.directory}/site</outputDirectory>
+                </configuration>
+                <dependencies>
+
+                </dependencies>
+            </plugin>
+            <plugin>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>${maven.project.info.reports.plugin}</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <reporting>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>${maven.surefire.report.plugin}</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>${maven.jxr.plugin}</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven.javadoc.plugin}</version>
+                <configuration>
+                    <show>private</show>
+                    <!--outputDirectory>${documentation.directory}/apidocs/${project.artifactId}/${project.version}</outputDirectory-->
+                    <description>Javadoc API documentation</description>
+                    <detectLinks>true</detectLinks>
+                    <failOnError>true</failOnError>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </reporting>
+
+
+</project>
